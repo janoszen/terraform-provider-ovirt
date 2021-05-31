@@ -16,7 +16,7 @@ import (
 )
 
 func TestAccOvirtCluster_basic(t *testing.T) {
-	datacenterID := "5bc08e5b-03ab-0194-03cb-000000000289"
+	datacenterID := "bde7027a-fccc-11ea-a647-52540056c6d8"
 	networkID := "00000000-0000-0000-0000-000000000009"
 	suite := getOvirtTestSuite(t)
 	var cluster *ovirtsdk4.Cluster
@@ -115,7 +115,7 @@ resource "ovirt_cluster" "cluster" {
   threads_as_cores                  = true
   cpu_arch                          = "x86_64"
   cpu_type                          = "Intel SandyBridge Family"
-  compatibility_version             = "4.1"
+  compatibility_version             = "4.4"
 }
 `, datacenterID, networkID)
 }
@@ -133,7 +133,7 @@ resource "ovirt_cluster" "cluster" {
   threads_as_cores                  = true
   cpu_arch                          = "x86_64"
   cpu_type                          = "Intel SandyBridge Family"
-  compatibility_version             = "4.1"
+  compatibility_version             = "4.4"
 }
 `, datacenterID, networkID)
 }
